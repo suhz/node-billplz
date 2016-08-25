@@ -3,7 +3,7 @@
 const Wreck = require('wreck')
 let wreck
 
-class Billplz {
+module.exports = class Billplz {
 
   constructor(options) {
 
@@ -67,10 +67,4 @@ class Billplz {
       callback(err, JSON.parse(payload.toString()))
     });
   }
-
-  //payment confirmation
-  webhook(postData) {
-    //TODO
-  }
-
 }
