@@ -1,5 +1,5 @@
 {
-  "name": "node-billplz",
+  "name": "billplz",
   "version": "1.0.0",
   "description": "Billplz API Wrapper",
   "main": "index.js",
