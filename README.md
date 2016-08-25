@@ -11,13 +11,13 @@ npm install billplz
 
 
 ### Create a client
-```
+```javascript
 const Billplz = require('billplz')
 const billplz = new Billplz('your-api-key')
 ```
 
 ###### Optional parameter (if needed)
-```
+```javascript
 const billplz = new Billplz({
   'key': 'your-api-key',
   'endpoint': 'https://www.billplz.com/api/v3/',
@@ -27,7 +27,7 @@ const billplz = new Billplz({
 
 
 ### Create a collection
-```
+```javascript
 billplz.create_collection({
   'title': 'My Noodle Shop'
 }, function(err, res) {
@@ -41,7 +41,7 @@ billplz.create_collection({
 ```
 
 ### Create an open collection
-```
+```javascript
 billplz.create_collectionOpen({
   'title': 'Noodle Exhibition Ticket',
   'description': 'VVIP Ticket to Noodle Exhibition!',
@@ -54,7 +54,7 @@ billplz.create_collectionOpen({
 ```
 
 ### Create a bill
-```
+```javascript
 billplz.create_bill({
   'collection_id': 'your-collection-id',
   'description': 'Mee Segera Sedap 200g',
@@ -70,14 +70,14 @@ billplz.create_bill({
 ```
 
 ### Retrieve a bill
-```
+```javascript
 billplz.get_bill('your-bill-id', function(err, res) {
   console.log(res)
 })
 ```
 
 ### Delete a bill
-```
+```javascript
 billplz.delete_bill('your-bill-id', function(err, res) {
   console.log(res)
 })
