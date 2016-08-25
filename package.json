@@ -1,0 +1,25 @@
+{
+  "name": "node-billplz",
+  "version": "1.0.0",
+  "description": "Billplz API Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhz/node-billplz.git"
+  },
+  "keywords": [
+    "billplz"
+  ],
+  "author": "Suhaimi Amir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suhz/node-billplz/issues"
+  },
+  "homepage": "https://github.com/suhz/node-billplz#readme",
+  "dependencies": {
+    "wreck": "^9.0.0"
+  }
+}
