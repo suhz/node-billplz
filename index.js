@@ -67,4 +67,11 @@ module.exports = class Billplz {
       callback(err, JSON.parse(payload.toString()))
     });
   }
+
+  //change collection status
+  change_collection_status(collectionId, status, callback) {
+    wreck.post(this._apiEndpoint + 'collections/' + collectionId + '/' + status, (err, res, payload) => {
+      callback(err, JSON.parse(payload.toString()))
+    });
+  }
 }

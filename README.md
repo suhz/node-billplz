@@ -82,3 +82,11 @@ billplz.delete_bill('your-bill-id', function(err, res) {
   console.log(res)
 })
 ```
+
+### Change a collection status
+```javascript
+// activate or deactivate
+billplz.change_collection_status('your-collection-id', 'status-here', function(err, res) {
+  console.log(err);
+})
+```
