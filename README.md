@@ -1,7 +1,11 @@
 # node-billplz
+[![license img](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 [Billplz API](https://www.billplz.com/api) wrapper for nodejs. This module supports only Billplz API V3.
 
 API Reference: https://www.billplz.com/api
+
+[![NPM](https://nodei.co/npm/billplz.png)](https://nodei.co/npm/billplz/)
 
 ## Usage
 ### Install
