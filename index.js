@@ -74,4 +74,11 @@ module.exports = class Billplz {
       callback(err, JSON.parse(payload.toString()))
     });
   }
+
+  //registration check
+  registration_check(bankAccountNumber, callback) {
+    wreck.get(this._apiEndpoint + 'check/bank_account_number/' + bankAccountNumber, (err, res, payload) => {
+      callback(err, JSON.parse(payload.toString()))
+    })
+  }
 }

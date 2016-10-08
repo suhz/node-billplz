@@ -94,3 +94,10 @@ billplz.change_collection_status('your-collection-id', 'status-here', function(e
   console.log(err);
 })
 ```
+
+### Registration check
+```javascript
+billplz.registration_check('your-bank-account-number', function(err, res) {
+  console.log(res.name);
+});
+```
