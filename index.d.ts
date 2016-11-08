@@ -1,8 +1,3 @@
-// Type definitions for billplz 1.0.2
-// Project: https://github.com/suhz/node-billplz
-// Definitions by: Akim <https://github.com/Akim95>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
 declare namespace Billplz {
     // api options type
     interface BillplzOptions {
