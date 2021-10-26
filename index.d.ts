@@ -4,6 +4,7 @@ declare namespace Billplz {
         key: string;
         endpoint?: string;
         sandbox?: boolean;
+        xSignatureKey: string;
     }
 
     // collection type
@@ -68,6 +69,9 @@ declare class Billplz {
 
     // registration check
     registration_check(bankAccountNumber: string, callback?: (res: any, err: any) => void): void;
+
+        // verifySignature
+        verifySignature(object: any, signature: string): boolean;
 }
 
 export = Billplz;

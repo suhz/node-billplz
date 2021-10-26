@@ -101,3 +101,7 @@ billplz.registration_check('your-bank-account-number', function(err, res) {
   console.log(res.name);
 });
 ```
+### Verify Signature
+```javascript
+const isVerified = billplz.verifySignature(request.body, request.body.x_signature);
+```
