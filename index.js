@@ -9,18 +9,16 @@ class Billplz {
   constructor(options) {
 
     this._apiKey = null
-    this._apiEndpoint = 'https://www.billplz.com/api/v3/'
-    this._sandboxApiEndpoint = 'https://billplz-staging.herokuapp.com/api/v3/'
+    this._apiEndpoint = 'https://www.billplz.com/api/'
+    this._sandboxApiEndpoint = 'https://billplz-staging.com/api/'
     this._isSandbox = false
 
     if (typeof options === 'object') {
       this._apiKey = options.key || this._apiKey
-      this._apiEndpoint = options.endpoint || this._apiEndpoint
-      this._sandboxApiEndpoint = options.sandboxEndpoint || this._sandboxApiEndpoint
       this._isSandbox = options.sandbox || this._isSandbox
       this._xSignatureKey = options.xSignatureKey
     } else {
-      this._apiKey = options
+      throw(Error("Invalid options"))
     }
 
     if (this._isSandbox) {
@@ -82,7 +80,7 @@ class Billplz {
       callback(err, JSON.parse(payload.toString()))
     })
   }
-
+  
   verifySignature(object, signature) {
     const objectSignature = signer(object, this._xSignatureKey)
     return objectSignature === signature

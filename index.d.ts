@@ -2,7 +2,6 @@ declare namespace Billplz {
     // api options type
     interface BillplzOptions {
         key: string;
-        endpoint?: string;
         sandbox?: boolean;
         xSignatureKey: string;
     }
@@ -47,7 +46,7 @@ declare namespace Billplz {
 
 declare class Billplz {
     // constructor
-    constructor(options: string | Billplz.BillplzOptions);
+    constructor(options: Billplz.BillplzOptions);
 
     // create_collection
     create_collection(title: Billplz.CollectionArguments, callback?: (res: any, err: any) => void): void;
@@ -70,8 +69,8 @@ declare class Billplz {
     // registration check
     registration_check(bankAccountNumber: string, callback?: (res: any, err: any) => void): void;
 
-        // verifySignature
-        verifySignature(object: any, signature: string): boolean;
+    // verifySignature
+    verifySignature(object: any, signature: string): boolean;
 }
 
 export = Billplz;
