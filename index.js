@@ -21,7 +21,7 @@ class Billplz {
       throw(Error("Invalid options"))
     }
 
-    if (this._isSandbox) {
+    if (this._isSandbox === true) {
       this._apiEndpoint = this._sandboxApiEndpoint
     }
 
