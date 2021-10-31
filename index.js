@@ -34,7 +34,11 @@ class Billplz {
     wreck.post(this._apiEndpoint + method, {
         payload: params
       }, (err, res, payload) => {
+        try{
         callback(err, JSON.parse(payload.toString()))
+        }catch(e){
+          throw(`${e} ${payload.toString()}`);
+        }
     })
   }
 
