@@ -16,16 +16,10 @@ npm install billplz
 
 ### Create a client
 ```javascript
-const Billplz = require('billplz')
-const billplz = new Billplz('your-api-key')
-```
-
-###### Optional parameter (if needed)
-```javascript
 const billplz = new Billplz({
   'key': 'your-api-key',
-  'endpoint': 'https://www.billplz.com/api/v3/',
-  'sandbox': true
+  'sandbox': true,
+  'xSignatureKey': 'your-xSignatureKey',
 })
 ```
 
