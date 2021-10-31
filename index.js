@@ -9,8 +9,8 @@ class Billplz {
   constructor(options) {
 
     this._apiKey = null
-    this._apiEndpoint = 'https://www.billplz.com/api/v3'
-    this._sandboxApiEndpoint = 'https://billplz-sandbox.com/api/v3'
+    this._apiEndpoint = 'https://www.billplz.com/api/v3/'
+    this._sandboxApiEndpoint = 'https://www.billplz-sandbox.com/api/v3/'
     this._isSandbox = false
 
     if (typeof options === 'object') {
