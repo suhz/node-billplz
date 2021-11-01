@@ -20,12 +20,12 @@ class Billplz {
 
     this._authentication = `Basic ${Buffer.from(this._apiKey).toString("base64")}`; 
     wreck = Wreck.defaults({
-      headers: {"Authorization": authentication },
+      headers: {"Authorization": this._authentication },
     });
   }
 
   request(method, params, callback) {
-    console.log("authentication", this.authentication);
+    console.log("authentication", this._authentication);
     wreck.post(this._apiEndpoint + method, {
       payload: params,
     }, (err, res, payload) => {
