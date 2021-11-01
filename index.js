@@ -10,13 +10,12 @@ class Billplz {
     this._apiEndpoint = "https://www.billplz.com/api/v3/";
     this._sandboxApiEndpoint = "https://www.billplz-sandbox.com/api/v3/";
 
-    this._apiKey = _options.key;
-    this._isSandbox = _options.sandbox || false;
-    this._xSignatureKey = _options.xSignatureKey;
+    this._apiKey = this._options.key;
+    this._xSignatureKey = this._options.xSignatureKey;
 
-    if (this._isSandbox === true) {
+    if (this._options.sandbox === true) {
       this._apiEndpoint = this._sandboxApiEndpoint;
-      console.log(`Sandbox Mode On ${this._isSandbox} ${_options.sandbox}`);
+      console.log(`Sandbox Mode On ${this._options.sandbox}`);
     }
 
     this._authentication = `Basic ${Buffer.from(this._apiKey).toString("base64")}`; 
