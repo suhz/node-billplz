@@ -8,18 +8,13 @@ class Billplz {
 
   constructor(options) {
 
-    this._apiKey = null
+    
     this._apiEndpoint = 'https://www.billplz.com/api/v3/'
     this._sandboxApiEndpoint = 'https://www.billplz-sandbox.com/api/v3/'
-    this._isSandbox = false
-
-    if (typeof options === 'object') {
-      this._apiKey = options.key || this._apiKey
-      this._isSandbox = options.sandbox || this._isSandbox
+    
+      this._apiKey = options.key
+      this._isSandbox = options.sandbox
       this._xSignatureKey = options.xSignatureKey
-    } else {
-      throw(Error("Invalid options"))
-    }
 
     if (this._isSandbox === true) {
       this._apiEndpoint = this._sandboxApiEndpoint
