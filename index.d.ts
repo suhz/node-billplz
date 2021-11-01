@@ -28,8 +28,8 @@ declare namespace Billplz {
     // bill type
     interface BillArguments {
         collection_id: string;
-        email: string;
-        mobile: number;
+        email?: string;
+        mobile?: number;
         name: string;
         amount: number;
         callback_url: string;
