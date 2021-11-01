@@ -18,14 +18,14 @@ class Billplz {
       console.log("Sandbox Mode On");
     }
 
-    const authentication = `Basic ${Buffer.from(this._apiKey).toString("base64")}`; 
+    this._authentication = `Basic ${Buffer.from(this._apiKey).toString("base64")}`; 
     wreck = Wreck.defaults({
       headers: {"Authorization": authentication },
     });
   }
 
   request(method, params, callback) {
-    console.log("authentication", authentication);
+    console.log("authentication", this.authentication);
     wreck.post(this._apiEndpoint + method, {
       payload: params,
     }, (err, res, payload) => {
