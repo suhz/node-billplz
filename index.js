@@ -21,7 +21,7 @@ class Billplz {
     }
 
     wreck =  Wreck.defaults({
-      headers: { 'Authorization': 'Basic ' + new Buffer(this._apiKey).toString('base64') }
+      headers: { 'Authorization': 'Basic ' + new Buffer.from(this._apiKey).toString('base64') }
     })
   }
 
