@@ -2,7 +2,7 @@ declare namespace Billplz {
     // api options type
     interface BillplzOptions {
         key: string;
-        sandbox?: boolean;
+        sandbox: boolean;
         xSignatureKey: string;
     }
 
