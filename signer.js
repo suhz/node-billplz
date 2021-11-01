@@ -1,14 +1,13 @@
-'use strict';
+"use strict";
 
 /**
  * For more information about this process check the following link:
  * https://www.billplz.com/api#x_signature
  */
 
-const sha256 = require('js-sha256')
+const sha256 = require("js-sha256");
 
 module.exports = function signObject(payload, signatureKey) {
-
   const id = payload.id;
   const collectionID = payload.collection_id;
   const paid = payload.paid;
@@ -48,4 +47,4 @@ module.exports = function signObject(payload, signatureKey) {
     url;
 
   return sha256.hmac(signatureKey, longstring);
-}
+};
