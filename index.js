@@ -15,6 +15,7 @@ class Billplz {
 
     if (this._isSandbox === true) {
       this._apiEndpoint = this._sandboxApiEndpoint;
+      console.log("Sandbox Mode On");
     }
 
     wreck = Wreck.defaults({
