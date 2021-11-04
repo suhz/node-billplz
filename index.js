@@ -25,7 +25,6 @@ class Billplz {
   }
 
   request(method, params, callback) {
-    console.log("authentication", this._authentication);
     wreck.post(this._apiEndpoint + method, {
       payload: params,
     }, (err, res, payload) => {
