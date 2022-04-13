@@ -7,8 +7,8 @@ let wreck;
 class Billplz {
   constructor(parameters) {
     this._options = parameters;
-    this._apiEndpoint = "https://www.billplz.com/api/";
-    this._sandboxApiEndpoint = "https://www.billplz-sandbox.com/api/";
+    this._apiEndpoint = "https://www.billplz.com/api/v3/";
+    this._sandboxApiEndpoint = "https://www.billplz-sandbox.com/api/v3/";
 
     this._apiKey = this._options.key;
     this._xSignatureKey = this._options.xSignatureKey;
